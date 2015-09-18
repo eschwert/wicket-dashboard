@@ -195,7 +195,7 @@ To run the demo application use:
     cd demo
     mvn jetty:run
 
-In the internet browser type http://localhost:8081/.
+In the internet browser type http://localhost:8082/.
 
 You can see a screenshot of the demo application on the project's [wiki page] (https://github.com/decebals/wicket-dashboard/wiki).
 
