@@ -32,7 +32,6 @@
     </dependencies>
 
     <modules>
-        <module>ofchart</module>
         <module>jqplot</module>
         <module>loremipsum</module>
         <module>justgage</module>

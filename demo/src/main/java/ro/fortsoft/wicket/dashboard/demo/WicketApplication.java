@@ -20,7 +20,7 @@ import ro.fortsoft.wicket.dashboard.DashboardContextInitializer;
 import ro.fortsoft.wicket.dashboard.DefaultDashboard;
 import ro.fortsoft.wicket.dashboard.demo.jqplot.DemoChartFactory;
 import ro.fortsoft.wicket.dashboard.demo.justgage.DemoJustGageFactory;
-import ro.fortsoft.wicket.dashboard.demo.ofchart.DemoChartDataFactory;
+
 import ro.fortsoft.wicket.dashboard.demo.wickedCharts.DemoHighChartsFactory;
 import ro.fortsoft.wicket.dashboard.web.DashboardContext;
 import ro.fortsoft.wicket.dashboard.widget.jqplot.JqPlotWidget;
@@ -28,8 +28,7 @@ import ro.fortsoft.wicket.dashboard.widget.jqplot.JqPlotWidgetDescriptor;
 import ro.fortsoft.wicket.dashboard.widget.justgage.JustGageWidget;
 import ro.fortsoft.wicket.dashboard.widget.justgage.JustGageWidgetDescriptor;
 import ro.fortsoft.wicket.dashboard.widget.loremipsum.LoremIpsumWidgetDescriptor;
-import ro.fortsoft.wicket.dashboard.widget.ofchart.ChartWidget;
-import ro.fortsoft.wicket.dashboard.widget.ofchart.ChartWidgetDescriptor;
+
 import ro.fortsoft.wicket.dashboard.widgets.wicked.charts.HighChartsWidget;
 import ro.fortsoft.wicket.dashboard.widgets.wicked.charts.HighChartsWidgetDescriptor;
 
@@ -65,7 +64,6 @@ public class WicketApplication extends WebApplication {
 		DashboardContext dashboardContext = getDashboardContext();
 		dashboardContext.getWidgetRegistry()
 			.registerWidget(new LoremIpsumWidgetDescriptor())
-			.registerWidget(new ChartWidgetDescriptor())
 			.registerWidget(new JqPlotWidgetDescriptor())
 			.registerWidget(new JustGageWidgetDescriptor())
             .registerWidget(new HighChartsWidgetDescriptor());
@@ -74,7 +72,7 @@ public class WicketApplication extends WebApplication {
 		dashboardContext.setWidgetActionsFactory(new DemoWidgetActionsFactory());
 
 		// set some (data) factory
-        ChartWidget.setChartDataFactory(new DemoChartDataFactory());
+
 		JqPlotWidget.setChartFactory(new DemoChartFactory());
 		JustGageWidget.setJustGageFactory(new DemoJustGageFactory());
         HighChartsWidget.setHighChartsFactory(new DemoHighChartsFactory());
